@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+    xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+    xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, user-scalable=no"></meta>
+	<title>Dashboard</title>
+
+	<link rel="stylesheet" type="text/css" href="resources/css/bootstrap-5.3.1/bootstrap.min.css"></link>
+	<link rel="stylesheet" type="text/css" href="resources/css/index.css"></link>
+</h:head>
+<h:body>
+	<img class="wave" src="resources/img/login/wave.svg" />
+	<div class="container">
+		<div class="img">
+			<img src="resources/img/login/undraw_progressive_app_m-9-ms.svg" />
+		</div>
+		<div class="login-content">
+			<p:growl id="growl" showDetail="true" skipDetailIfEqualsSummary="true"/>
+			<h:form>
+				<img src="resources/img/login/undraw_visual_data_re_mxxo.svg" />
+				<h2 class="title tnrb">BIENVENIDO</h2>
+				<div class="input-div one">
+					<div class="i">
+						<i class="fas fa-user"></i>
+					</div>
+					<div class="div">
+						<h5>USUARIO</h5>
+						<p:inputText id="username" name="username" class="input" value="#{login.user}" required="true" requiredMessage="El usuario es requerido" />
+					</div>
+				</div>
+				<div class="input-div pass">
+					<div class="i">
+					</div>
+					<div class="div">
+						<h5>CONTRASEÑA</h5>
+						<p:password id="password" name="password" class="input" value="#{login.pass}" required="true" requiredMessage="La contraseña es requerida" />
+					</div>
+				</div>
+				<p:commandButton class="btnLogin" value="Iniciar Sesión" action="#{login.login}" update="growl"></p:commandButton>
+				<br /> <br />
+				<div class="logo_tmx_sidevar" style="width: auto;"></div>
+			</h:form>
+		</div>
+	</div>
+
+	<!-- Script - JS -->
+	<script type="text/javascript" src="resources/js/bootstrap-5.3.1/bootstrap.min.js"></script>
+	<script type="text/javascript" src="resources/js/index.js"></script>
+</h:body>
+</html>

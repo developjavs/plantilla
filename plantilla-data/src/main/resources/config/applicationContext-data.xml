@@ -14,7 +14,7 @@
     	https://www.springframework.org/schema/data/jpa/spring-jpa.xsd">
 
 	<context:annotation-config></context:annotation-config>
-	<context:component-scan base-package="com.develop"></context:component-scan>
+	<context:component-scan base-package="com.jace"></context:component-scan>
 
 	<context:property-placeholder location="classpath*:config/applications-properties.properties"/>
 
@@ -50,5 +50,5 @@
 	<!-- Permite utilizar anotacion @Transactional de Spring -->
 	<tx:annotation-driven transaction-manager="transactionManager"/>
 
-	<jpa:repositories base-package="com.develop.plantilla.repositories" entity-manager-factory-ref="emf"></jpa:repositories>
+	<jpa:repositories base-package="com.jace.repository" entity-manager-factory-ref="emf"></jpa:repositories>
 </beans>
